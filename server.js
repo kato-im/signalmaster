@@ -3,7 +3,7 @@ var yetify = require('yetify'),
     config = require('getconfig'),
     uuid = require('node-uuid'),
     crypto = require('crypto'),
-    io = require('socket.io').listen(config.server.port);
+    io = require('socket.io').listen(config.server.port, {"log level": 2});
 
 function describeRoom(name) {
     var clients = io.sockets.clients(name);
